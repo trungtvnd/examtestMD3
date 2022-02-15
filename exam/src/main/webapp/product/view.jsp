@@ -22,7 +22,7 @@
             width: 700px;
         }
         table, tr, td {
-            padding: 5px;
+            padding: 10px;
         }
 
     </style>
@@ -41,7 +41,7 @@
 
         <div class="displayTable">
             <div style="float:right;">
-                <form action="${pageContext.request.contextPath}/products?action=search" method="get">
+                <form action="${pageContext.request.contextPath}/products?action=search" method="post">
                     <label>
                         <input type="text" name="search">
                     </label>

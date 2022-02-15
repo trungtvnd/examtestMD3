@@ -35,9 +35,7 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "delete":
                 Delete(req, resp);
-            case "search":
-                search(req, resp);
-                break;
+
             default:
                 listProduct(req, resp);
 
@@ -116,6 +114,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "edit":
                 editPost(req, resp);
+                break;
+            case "search":
+                search(req, resp);
                 break;
         }
     }

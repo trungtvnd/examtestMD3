@@ -145,9 +145,11 @@ public class ProductDAO implements IProductDAO {
         List<Product> products = new ArrayList<>();
         try {
             Connection connection = myConnection.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(" SELECT *\n" +
-                    " FROM product \n" +
-                    " Where name like ? ");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT p.id, p.name,p.price, p.quantity, p.color, p.describeProduct, c.name\n" +
+                    "FROM product p\n" +
+                    "JOIN category c ON c.id = p.idCategory\n" +
+                    " Where p.name like ? ");
+
             preparedStatement.setString(1, name);
             ResultSet resultSet = preparedStatement.executeQuery();
 
