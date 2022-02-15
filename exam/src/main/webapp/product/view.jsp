@@ -24,6 +24,13 @@
         table, tr, td {
             padding: 10px;
         }
+        tr:nth-child(even) td{
+            background-color: rgba(245, 221, 136, 0.99);
+        }
+        tr:hover{
+            background-color:#ddd;
+            cursor:pointer;
+        }
 
     </style>
 </head>
@@ -35,8 +42,8 @@
 <div>
 
     <div>
-        <div>
-            <p>Product List</p>
+        <div style="padding-left: 30px">
+            <p><strong>Product List</strong></p>
         </div>
 
         <div class="displayTable">
